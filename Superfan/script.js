@@ -29,142 +29,38 @@ function showPic(){
 		g.src = "images/bb.PNG";
 	}
 }
-// The setInterval function set variables x, y, z to create a random function and also rounding the outcome using MATH, The bg variable sets a place holder for the number value that will replace the x, y, z. The numbers their end up becoming the rgb color value.
 setInterval(function(){
-	var x = Math.round(Math.random() * 255);
-	var y = Math.round(Math.random() * 255);
-	var z = Math.round(Math.random() * 255);
-	var bg = "background:rgb("+x+" , "+y+" , "+z+");";
-	var element = document.getElementById("color");
-	element.style = bg;
+// generates red color band number as a random number
+var x = Math.round(Math.random() * 255);
+// generates blue color band number as a random number
+var y = Math.round(Math.random() * 255);
+// generates green color band number as a random number
+var z = Math.round(Math.random() * 255);
+// concatines a string which will be used to replace the style of the element
+// with the newly generated RGB values
+var bg = "background:rgb("+x+" , "+y+" , "+z+");";
+// gets the elements that will have its style changed
+var element = document.getElementById("color");
+// changes the style to the newly generated style
+element.style = bg;
+// this will occur with an interval of 1000
 }, 1000);
 
-function calculator() {
-	x = Math.floor((Math.random() * 10) + 1);
-	return x;
+const colors = ["red", "tan", "green", "light_blue", "yellow", "pink", "purple", "black", "white", "sky"];
+
+function calculate() {
+  return Math.floor(Math.random() * colors.length));
 }
+
 function randomColor() {
-	calculator();
-	if (x == 1) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("sky");
-	}
-	else if (x == 2) {
-		h.classList.remove("sky");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("red");
-	}
-	else if (x == 3) {
-		h.classList.remove("red");
-		h.classList.remove("sky");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("tan");
-	}
-	else if (x == 4) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("sky");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("green");
-	}
-	else if (x == 5) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("sky");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("light_blue");
-	}
-	else if (x == 6) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("sky");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("yellow");
-	}
-	else if (x == 7) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("sky");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("pink");
-	}
-	else if (x == 8) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("sky");
-		h.classList.remove("black");
-		h.classList.remove("white");
-		h.classList.add("purple");
-	}
-	else if (x == 9) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("sky");
-		h.classList.remove("white");
-		h.classList.add("black");
-	}
-	else if (x == 10) {
-		h.classList.remove("red");
-		h.classList.remove("tan");
-		h.classList.remove("green");
-		h.classList.remove("light_blue");
-		h.classList.remove("yellow");
-		h.classList.remove("pink");
-		h.classList.remove("purple");
-		h.classList.remove("black");
-		h.classList.remove("sky");
-		h.classList.add("white");
-	}
+  let x = calculate();
+  for (let i = 0; i < colors.length; i++) {
+    if (i == x) {
+      h.classList.add(colors[i]);
+    } else {
+      h.classList.remove(colors[i]);
+    }
+  }
 }
 
 function playSound() {
