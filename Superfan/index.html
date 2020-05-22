@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+		<!-- important information the computer needs -->
+		<meta charset="utf-8">
+		<title>SuperFan</title>
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Slackey&display=swap" rel="stylesheet">
+	</head>
+
+	<body id="color">
+		<!-- all content that shows up on the web page -->
+		<div class="row center-content title break">
+			<h1> SpongeBob SquarePants Sound Board</h1>
+		</div>
+		<div class="mid-row center " id="color">	
+			<img src="images/bb.PNG" class="contain pointer" id="jee" onClick="showPic()">
+		</div>
+		<div class=" bot-row">
+			<div class="small-row">
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="tee" class="box yellow fit center">
+					<img src="images/spongebob.png" class="center-content contain img  center" onClick="playSound()">
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound()" class="text" >SpongeBob SquarePants</p>
+				</div>
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="cee" class="box pink pointer fit center">
+					<img src="images/patrick.png" class="center-content contain img  center" onClick="playSound1()">
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound1()" class="text">Patrick Star</p>
+				</div>
+			</div>
+			<div class="small-row">
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="bee" class="box green fit center">
+					<img src="images/gary.png" class="center-content contain img  center" onClick="playSound2()">
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound2()" class="text">Gary the Snail</p>
+				</div>
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="wee" class="box light_blue fit center " >
+					<img src="images/squidward.png" class="center-content contain img  center" onClick="playSound3()">
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound3()" class="text">Squidward Tentacles</p>
+				</div>
+			</div>
+			<div class="small-row">
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="mee" class="box tan  fit center">
+					<img src="images/ss.png" class="center-content contain img  center" onClick="playSound4()" >
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound4()" class="text">Sandy Cheeks</p>
+				</div>
+			<!-- Each box has an ID to be able to call a function -->
+				<div id="ree" class="box red  fit center">
+					<img src="images/krabs.png" class="center-content contain img  center" onClick="playSound5()">
+				<!-- Each Text is hidden until mobile breakpoint -->
+					<p onClick="playSound5()" class="text">Mr.Krabs</p>
+				</div>
+			</div>
+		</div>
+		<!-- Audio dources are at bottom of sheer outside the body -->
+		<audio src="audio/theme.wav" type="audio/wav" id="theme"></audio>
+		<audio src="audio/saudio.mp3" type="audio/mp3" id="sponge"></audio>
+		<audio src="audio/paudio.mp3" type="audio/mp3" id="star"></audio>
+		<audio src="audio/gaudio.mp3" type="audio/mp3" id="snail"></audio>
+		<audio src="audio/taudio.mp3" type="audio/mp3" id="tent"></audio>
+		<audio src="audio/caudio.mp3" type="audio/mp3" id="cheeks"></audio>
+		<audio src="audio/kaudio.mp3" type="audio/mp3" id="mr"></audio>
+		<!-- Link javascript file -->
+		<script src="script.js"></script>
+	</body>
+	
+</html>

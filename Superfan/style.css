@@ -1,0 +1,184 @@
+body {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+}
+
+.green {
+	background-color: #008D24;
+}
+
+.light_blue {
+	background-color: #0B69C0;
+}
+
+.tan {
+	background-color: #FFDAB9;
+}
+
+.red {
+	background-color: #CA1B22;
+}
+
+.yellow {
+	background-color: #FFD700;
+
+}
+.black {
+	background-color: black;
+}
+.white {
+	background-color: #FFFFFF;
+}
+.sky {
+	background-color: #34D4D2;
+}
+
+.pink {
+	background-color: #FFC0CB
+}
+
+.purple {
+	background-color: #BA55D3
+}
+#random-background {
+	width: 100vw;
+	height: 100vw;
+	background: white;
+	margin: 0px;
+	transition: 1s;
+}
+.box {
+	height: 100%;
+	width: calc(100%/2);
+}
+.small-row{
+	height: 100%;
+	width: calc(100%/3);
+	display: flex;
+}
+.row {
+	height: 10%;
+	width: 100%;
+	display:flex;
+}
+
+.break {
+	word-wrap: break-word;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.fit {
+	filter: brightness(75%);
+}
+
+.border {
+	border: .5px; 
+	border-color: black;
+	border-style: solid;
+}
+
+.mid-row {
+	height: 50%;
+	width: 100%;
+	display: flex;
+}
+
+.bot-row {
+	height: 40%;
+	width: 100%;
+	display: flex;
+	background-color: #CA1B22;
+}
+.center-content {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.contain {
+	max-height: 90%;
+	max-width: 90%;
+	
+}
+
+.center {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+img:hover {cursor: pointer;}
+.no-cursor:hover {cursor: default;}
+
+
+.title {
+	font-size: 25px;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Slackey', cursive;
+}
+.text{
+	display: none;
+}
+
+@media only screen and (max-width: 900px) {
+ .bot-row {
+		display: block;
+	}
+	
+	.small-row {
+		height: 100%;
+		width: 100%;
+	}
+
+	.title {
+		display: block;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.contain {
+		max-height: 75%;
+		max-width: 75%;
+	}
+	
+img:hover {cursor: pointer;}
+.no-cursor:hover {cursor: default;}
+}
+
+@media only screen and (max-width: 600px) {
+ .bot-row {
+		display: block;
+	}
+	
+	.small-row {
+		height: 100%;
+		width: 100%;
+		display:block;
+	}
+	
+	.box {
+		height: 50%;
+		width: 100%;
+	}
+	
+	.center-content {
+		display: none;
+	}
+	
+	.text {
+		font-family: 'Slackey', cursive;
+		font-size: 25px;
+		color: black;
+		display: block;
+	}
+	.contain {
+		max-height: 75%;
+		max-width: 75%;
+	}
+	
+p:hover {cursor: pointer;}
+}
